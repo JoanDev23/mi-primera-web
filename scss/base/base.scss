@@ -1,0 +1,19 @@
+@use 'variables/fonts' as v;
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  font-family: v.$Style-roboto;
+  font-weight: 700;
+}
+
+.no-margin {
+  margin: 0;
+}

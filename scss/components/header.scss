@@ -1,0 +1,57 @@
+@use 'variables/colors' as v;
+@use '../variables/mixins.scss' as m;
+
+body {
+  background: v.$Lawrencium;
+  color: white;
+}
+
+/* Header styles */
+.header {
+  
+}
+
+.header__container {
+  max-width:  100%;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  background-color: #7d0000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  //mixin mobile
+  @include m.respond-to(mobile) {
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 70px 29px 100px 25px;
+    margin: .7rem;
+  }
+}
+
+.header__nav {
+  display: flex;
+  gap: .7rem;
+  align-items: center;
+  justify-content: center;
+  //estilo mobile
+  @include m.respond-to(mobile){
+    flex-direction: column;
+    font-size: 2rem;
+  }
+
+
+  a {
+    color: wheat;
+    text-decoration: none;
+    transition: color .3s ease;
+    padding: 1rem;
+
+    &:hover {
+      padding: 1rem;
+      background-color: v.$Space-cadet;
+      color: white;
+    }
+  }
+}
