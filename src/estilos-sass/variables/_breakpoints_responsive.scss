@@ -1,0 +1,29 @@
+// Breakpoints para diseño responsive
+// Definimos puntos de quiebre estándar para garantizar compatibilidad móvil del portafolio
+
+// Breakpoints principales
+$breakpoint-xs: 320px;    // Móviles muy pequeños
+$breakpoint-sm: 576px;    // Móviles grandes
+$breakpoint-md: 768px;    // Tablets
+$breakpoint-lg: 992px;    // Laptops pequeñas
+$breakpoint-xl: 1200px;   // Pantallas grandes
+$breakpoint-xxl: 1400px;  // Pantallas extra grandes
+
+// Mixins para media queries - facilitan el uso responsive en todo el proyecto
+@mixin mobile-only {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}

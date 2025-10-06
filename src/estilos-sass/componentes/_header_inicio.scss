@@ -1,0 +1,6 @@
+
+@use '../variables/colores_variables' as v;
+
+.header {
+    background-color: v.$color-secundario;
+}

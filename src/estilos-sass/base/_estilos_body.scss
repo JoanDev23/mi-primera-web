@@ -1,0 +1,13 @@
+// Importamos las variables para mantener consistencia de colores
+@use '../variables' as vars;
+@use '../variables/fonts' as fonts;
+
+// Estilos base del body - establecemos una base limpia y consistente
+// Usamos variables para facilitar cambios futuros de tema
+body {
+  background-color: vars.$color-fondo;  // Fondo usando variable para consistencia
+  color: vars.$color-texto-principal;             // Color de texto principal
+  font-family: fonts.$fuente-principal;       // Fuente legible y ampliamente compatible
+  margin: 0;                            // Reset de márgenes del navegador
+  padding: 0;                           // Reset de padding del navegador
+}

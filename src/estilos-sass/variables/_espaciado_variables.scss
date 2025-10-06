@@ -1,0 +1,15 @@
+// Variables de espaciado del portafolio
+// Definimos un sistema de espaciado consistente basado en múltiplos de 8px para mejor alineación visual
+
+$espaciado-xs: 0.25rem;   // 4px - Para espacios muy pequeños
+$espaciado-sm: 0.5rem;    // 8px - Espaciado pequeño entre elementos
+$espaciado-base: 1rem;    // 16px - Espaciado base estándar
+$espaciado-md: 1.5rem;    // 24px - Espaciado medio para secciones
+$espaciado-lg: 2rem;      // 32px - Espaciado grande entre secciones
+$espaciado-xl: 3rem;      // 48px - Espaciado extra grande para separación principal
+$espaciado-xxl: 4rem;     // 64px - Espaciado máximo para hero sections
+
+// Espaciado específico para componentes
+$padding-boton: $espaciado-sm $espaciado-base;        // Padding interno de botones
+$margin-seccion: $espaciado-xl 0;                     // Margen entre secciones principales
+$padding-contenedor: 0 $espaciado-base;               // Padding horizontal del contenedor

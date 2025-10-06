@@ -1,0 +1,60 @@
+// Estilos específicos para la página sobre-mi.html
+// Estos estilos solo se aplicarán a elementos únicos de esta página
+
+@use '../variables' as vars;
+
+// Contenedor principal de la página sobre mí
+.seccion-sobre-mi {
+  // Usamos variables de espaciado para mantener consistencia
+  padding: vars.$espaciado-xl 0;
+  background-color: vars.$color-fondo; // Fondo blanco para mejor legibilidad
+  
+  .contenedor-sobre-mi {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: vars.$padding-contenedor;
+    
+    h1 {
+      color: vars.$color-primario;
+      font-size: 2.5rem;
+      margin-bottom: vars.$espaciado-lg;
+      text-align: center;
+    }
+    
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: vars.$espaciado-md;
+      color: vars.$color-texto-principal;
+    }
+  }
+}
+
+// Sección específica del progreso en DAW - solo existe en esta página
+.mi-progreso-daw {
+  // Usamos el color secundario para diferenciarlo del contenido principal
+  background-color: vars.$color-secundario;
+  color: white;
+  padding: vars.$espaciado-lg;
+  border-radius: 8px;
+  margin-top: vars.$espaciado-xl;
+  
+  h2 {
+    margin-bottom: vars.$espaciado-base;
+    color: white;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      padding: vars.$espaciado-sm 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

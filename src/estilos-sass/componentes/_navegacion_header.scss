@@ -1,0 +1,51 @@
+// Estilos del header principal del portafolio DAW
+// Importamos variables para mantener coherencia visual en todo el proyecto
+@use '../variables/colores_variables' as v;
+@use '../variables/fonts' as fonts;
+
+.header {
+
+    .navegacion-header {
+        // Flexbox nos permite reorganizar fácilmente el layout en diferentes dispositivos
+        // Column en móvil garantiza que el logo y menú se apilen verticalmente para mejor UX
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;  // Column first para mobile-first approach
+        align-items: center;
+        
+        // Padding generoso para crear espacio respirable y profesionalismo visual
+        // Importante para que el header no se sienta cramped en dispositivos táctiles
+        padding: 1rem 2rem;
+    }
+
+    .barra-navegacion {
+        // Distribución uniforme de enlaces mejora la accesibilidad táctil
+        // Space-around asegura que cada enlace tenga área de click adecuada
+        display: flex;
+        flex-direction: column; // Column first para mobile-first approach
+        justify-content: space-around;
+        align-items: center;
+        
+        // Gap de 2rem garantiza separación visual clara entre elementos de navegación
+        // Crucial para evitar clicks accidentales en dispositivos móviles
+        gap: 2rem;
+
+        li a {
+            // Aumentamos tamaño de fuente para mejorar legibilidad en pantallas pequeñas
+            font-size: 1.5rem;
+            font-family: fonts.$fuente-secundaria;
+            font-weight: 400;
+            font-style: normal;
+            text-decoration: none;
+            color: v.$color-texto;
+        }
+    }
+}
+
+.navegacion-header h1 {
+    font-size: 3rem;
+    font-family: fonts.$fuente-principal;
+    font-weight: 700;
+    font-style: normal;
+
+}

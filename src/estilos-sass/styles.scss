@@ -1,0 +1,20 @@
+// Archivo principal de estilos - Portafolio DAW
+// Importa todos los módulos SASS en el orden correcto para evitar conflictos
+
+// 1. Variables (siempre primero para que estén disponibles en todos los módulos)
+@forward 'variables/index';
+
+// 2. Estilos base (reset, tipografía, elementos generales)
+@forward 'base/index';
+
+// 3. Layout (estructura general, grid, contenedores)
+// @forward 'layout/index';
+
+// 4. Componentes (botones, tarjetas, navegación)
+@forward 'componentes/index';
+
+// 5. Páginas (estilos específicos de cada página)
+@forward 'paginas/index';
+
+// 6. Utilidades (helpers, mixins, funciones etc.)
+@forward 'utilidades/index';
