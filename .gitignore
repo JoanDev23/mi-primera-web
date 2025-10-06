@@ -1,0 +1,10 @@
+# Dependencias de Node
+/node_modules
+
+# Archivos generados
+/dist
+/build
+
+# Archivos de configuración y caché
+.vscode
+.env
