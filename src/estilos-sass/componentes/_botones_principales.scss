@@ -1,0 +1,21 @@
+@use '../variables/colores_variables' as v;
+@use '../variables/fonts' as f;
+
+.boton-principal {
+
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    
+    a {
+        font-family: f.$fuente-roboto;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: .7rem;
+        color: v.$color-texto-enlace-principal;
+        background-color: v.$color-acento;
+        border-radius: 8px;
+        
+    }
+}
+

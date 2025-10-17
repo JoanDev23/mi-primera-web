@@ -354,18 +354,64 @@ html {
   font-style: normal;
 }
 
+.main-portafolio {
+  max-width: 96%;
+  margin: 1rem 0.4rem;
+  padding: 1rem;
+}
+
 .header {
   background-color: #f0f0f0;
 }
 
 .imagen img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-mi {
+  max-width: 100%;
+}
+.sobre-mi .sobre-mi-texto {
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 1.5rem 5rem 0 5rem;
+  font-family: "Space Grotesk", sans-serif;
+  padding: 0.3rem;
+  border-radius: 8px;
+  font-weight: 450;
+}
+
+.sobre-mi-presentacion {
+  background-color: #E0E1DD;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-radius: 12px;
+  padding: 1.2rem;
   margin-top: 1rem;
-  border-radius: 3%;
-  border: 4px solid #000;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #626262;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+}
+
+.boton-principal {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.boton-principal a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  color: #ffffff;
+  background-color: #ff7164;
+  border-radius: 8px;
 }
 
 .seccion-sobre-mi {
@@ -378,7 +424,7 @@ html {
   padding: 0 1rem;
 }
 .seccion-sobre-mi .contenedor-sobre-mi h1 {
-  color: #778DA9;
+  color: rgba(191, 197, 206, 0.6745098039);
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -411,11 +457,6 @@ html {
 }
 .mi-progreso-daw ul li:last-child {
   border-bottom: none;
-}
-
-.center-sections {
-  max-width: 95%;
-  margin: 0 auto;
 }
 
 .center-text {

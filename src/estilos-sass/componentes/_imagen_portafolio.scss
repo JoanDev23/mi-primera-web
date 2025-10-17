@@ -2,12 +2,9 @@
 .imagen {
 
     img {
-        width: 100%;
-        height: auto;
-        margin-top: 1rem;
-        border-radius: 3%;
-        border: 4px solid #000;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        max-width: 100%;
+        max-height: auto;
+        border-radius: 1rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     }
 }

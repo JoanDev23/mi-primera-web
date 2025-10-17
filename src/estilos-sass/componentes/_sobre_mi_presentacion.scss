@@ -1,0 +1,18 @@
+@use '../variables/colores_variables' as v;
+@use '../variables/fonts' as f;
+
+.sobre-mi-presentacion {
+    background-color: v.$depp-sea;
+    font-family: f.$fuente-roboto;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: v.$color-texto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
