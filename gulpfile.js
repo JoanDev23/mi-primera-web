@@ -15,5 +15,10 @@ function watchArchivos() {
   gulp.watch('./src/estilos-sass/**/*.scss', compilarSass);
 }
 
+// Definir una tarea 'build' si es necesario
+gulp.task('build', function() {
+    // Task implementation here
+});
+
 // Tarea 'default' para que se ejecute al teclear solo 'gulp'
 exports.default = watchArchivos;
