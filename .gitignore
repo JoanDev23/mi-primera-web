@@ -10,8 +10,6 @@
 .env
 
 # Archivos gulp
-/gulpfile.js
+
 
 # Archivos json
-/package-lock.json
-/package.json
