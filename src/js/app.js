@@ -2,7 +2,7 @@
 // Inicializa todos los módulos y componentes del portafolio
 
 // Importar componentes principales (cuando uses módulos ES6)
-// import { NavegacionHeader } from './componentes-js/NavegacionHeader.js';
+import { NavegacionHeader } from './navegacion-header/NavegacionHeader.js';
 // import { GestorProyectos } from './modulos-funcionales/GestorProyectos.js';
 
 // Función principal que inicializa el portafolio

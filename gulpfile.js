@@ -1,24 +1,26 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+import {src, dest, watch, series, parallel} from 'gulp' // src permite acceder a ciertos archivos del gulp y con el dest permitira crear el destino. series permite ejecutar las funciones en orden y parallel permite ejecutar las funciones al mismo tiempo
+import * as dartSass from 'sass' //importa todo lo que hay en sass en un archivo dartSass
+import gulpSass from 'gulp-sass' //importa lo que hay en sass en un archivo gulp
 
-function compilarSass() {
-  return gulp.src('./src/estilos-sass/styles.scss') // Solo el archivo principal
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css')); // Carpeta de destino para el CSS compilado
+const sass = gulpSass(dartSass) //gulpSass tendra lo que tenga en dartSass
+
+export function js(done){ //funcion js
+    src("src/js/app.js")
+    .pipe(dest("build/js")) //src es la carpeta de origen y dest es la carpeta de destino
+    done(); //sirve para deneter la funcion
 }
 
-// Exportar la tarea para poder ejecutarla con el comando 'gulp sass'
-exports.sass = compilarSass;
+export function css(done){
+    src("src/estilos-sass/styles.scss", { sourcemaps: true }) //src es la carpeta de origen y el sourcemaps es para que se genere un mapa de los archivos css
+        .pipe(sass({outputStyle: 'compact'}).on("error", sass.logError)) //convierte sass a css / .on("error", sass.logError)). permite mostrar errores en la terminal
+        .pipe(dest("build/css", {sourcemaps: true})) //destino de la carpeta build/css y el sourcemaps se guardara en la misma carpeta
 
-// Tarea 'watch' para que Gulp observe los cambios en los archivos
-function watchArchivos() {
-  gulp.watch('./src/estilos-sass/**/*.scss', compilarSass);
+    done(); //sirve para deneter la funcion
 }
 
-// Definir una tarea 'build' si es necesario
-gulp.task('build', function() {
-    // Task implementation here
-});
+export function dev(){
+    watch("src/estilos-sass/**/*.scss", css) //escucha todos los cambios en los archivos .scss en la carpeta src
+    watch("src/js/**/*.js", js) //escucha todos los cambios en los archivos .js en la carpeta src
+}
 
-// Tarea 'default' para que se ejecute al teclear solo 'gulp'
-exports.default = watchArchivos;
+export default series(js, css, dev) //exporta la funcion por defecto y ejecuta las funciones js, css y dev en ese orden

@@ -6,19 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "gulp",
-    "dev:portfolio": "gulp",
-    "build:prod": "gulp sass",
+    "build:prod": "gulp js css",
     "lint:fix": "echo \"Linting completado - sin errores\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "gulp": "^5.0.1",
     "gulp-autoprefixer": "^10.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cli": "^3.1.0",
     "gulp-sass": "^6.0.1",
     "sass": "^1.93.2"
-  },
-  "dependencies": {
-    "gulp": "^5.0.1"
   }
 }
