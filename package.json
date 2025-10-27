@@ -1,25 +1,27 @@
 {
   "name": "portafolio",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "module": "module",
+  "description": "Este proyecto es mi portafolio personal desarrollado como parte de mi formación en el Grado Superior de Desarrollo de Aplicaciones Web (DAW). Responde a la necesidad de mostrar mi progreso académico y profesional, desde principiante hasta graduado, creando una presencia web que demuestre las competencias adquiridas en los diferentes módulos del ciclo formativo.",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp",
-    "build:prod": "gulp js css",
-    "lint:fix": "echo \"Linting completado - sin errores\""
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "convert-images": "node src/js/modulos-funcionales/convert-images.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.28.4",
-    "@babel/preset-env": "^7.28.3",
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.1",
     "gulp": "^5.0.1",
-    "gulp-autoprefixer": "^10.0.0",
-    "gulp-babel": "^8.0.0",
-    "gulp-cli": "^3.1.0",
+    "gulp-postcss": "^10.0.0",
     "gulp-sass": "^6.0.1",
     "sass": "^1.93.2"
+  },
+  "dependencies": {
+    "sharp": "^0.34.4"
   }
 }
