@@ -26,7 +26,6 @@ git commit -m "refactor: Optimizar estructura de variables SASS para mejor mante
 ```
 
 ## Recuerda siempre:
-1. ✅ Ejecutar `npm run lint:fix` antes del commit
-2. ✅ Probar con `npm run build:prod` que todo compila
-3. ✅ Usar prefijos: feat/fix/refactor
-4. ✅ Descripción clara y orientada a la acción
+1. ✅ Ejecutar `npm run dev` para mantener en compilacion
+2. ✅ Probar con `npm run build` para compilar una vez
+3. ✅ Descripción clara y orientada a la acción

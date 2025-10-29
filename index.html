@@ -177,10 +177,30 @@
 
         <div class="grid-proyectos">
             <div class="proyecto-card">
-                <img src="src/imagenes/proyecto1.png" alt="Proyecto 1">
-                <h4>Proyecto 1: Sitio Web Personal</h4>
-                <p>Descripción breve del proyecto, tecnologías utilizadas y objetivos alcanzados.</p>
-                <a href="#" class="boton-cta">Ver Proyecto</a>
+
+                <!-- Usando picture para formatos de imagen optimizados -->
+                <picture>
+                    <!-- Fuentes de imagen en diferentes formatos -->
+                    <source srcset="build/imagenes/e-comerce.avif" type="image/avif">
+                    <source srcset="build/imagenes/e-comerce.webp" type="webp">
+
+                    <img src="build/imagenes/e-comerce.webp" alt="vista previa del proyecto e-comerce"
+                    class="proyecto-imagen"
+                    loading="lazy"
+                    width="400"
+                    height="300">
+                </picture>
+
+                <div class="proyecto-info">
+                    <h4 class="proyecto-info-text">Proyecto 1: Sitio Web Personal</h4>
+                    <p>Desarrollé una API REST optimizada con Node.js y PostgreSQL, resultando en una reducción del 40% en latencia y escalabilidad para 100k usuarios.</p>
+
+                    <div class="btn-proyecto">
+                        <a href="#">Ver Proyecto</a>
+                    </div>
+                    
+                </div>
+                
             </div>
             <div class="proyecto-card">
                 <img src="src/imagenes/proyecto2.png" alt="Proyecto 2">
